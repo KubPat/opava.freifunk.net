@@ -1,0 +1,52 @@
+{
+    "api":"0.4.1",
+    "contact":{
+        "email":"berlin@berlin.freifunk.net",
+        "ml":"berlin@berlin.freifunk.net",
+        "twitter":"@freifunk_berlin"
+    },
+    "location":{
+        "address":{
+            "Name":"c-base",
+            "Street":"Rungestr. 20",
+            "Zipcode":"10179"
+        },
+        "city":"Berlin",
+        "country":"DE",
+        "lat":52.518725000000003,
+        "lon":13.403119999999999
+    },
+    "name":"Freifunk Berlin",
+    "nodeMaps":[
+        {
+            "interval":"daily",
+            "mapType":"geographical",
+            "technicalType":"openwifimap",
+            "url":"http://www.openwifimap.net"
+        }
+    ],
+    "state":{
+        "focus":[
+            "infrastructure/backbone",
+            "Public Free Wifi",
+            "Free internet access"
+        ],
+        "lastchange":"2015-09-20T18:00:02.145026Z",
+        "nodes":500
+    },
+    "techDetails":{
+        "firmware":{
+            "name":"Berlin"
+        },
+        "legals":[
+            "zappscript",
+            "institutions"
+        ],
+        "routing":[
+            "batman-adv",
+            "OLSR"
+        ],
+        "updatemode":[]
+    },
+    "url":"http://berlin.freifunk.net/"
+}

@@ -1,0 +1,24 @@
+{% extends "_layout.html" %}
+{% block raw %}
+
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <ul class="span12 submenu">
+        {% import '_utils.html' as utils with context%}
+        {{ utils.nav('Přehled', 'participate/overview') }}
+        {{ utils.nav('JakNaTo', 'participate/howto') }}
+        {{ utils.nav('Příspěvky', 'participate/donate') }}
+        {{ utils.nav_external('Freifunk-Wizard', 'http://config.berlin.freifunk.net/wizard/routers') }}
+        {{ utils.nav_external('Freifunk-VPN', 'http://wiki.freifunk.net/Vpn03') }}
+        {{ utils.nav_external('BBB-VPN', 'http://bbb-vpn.berlin.freifunk.net') }}
+      </ul>
+
+      <div id="network">
+        {% block content %}{%endblock %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

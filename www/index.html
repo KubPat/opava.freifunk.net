@@ -1,0 +1,58 @@
+{% meta %}
+  endpoint: index
+{% endmeta %}
+
+{% block content %}
+
+<div id="lang-switch">
+  <a href="{{ url_for('index_en') }}">Anglická verze</a></li>
+</div>
+
+<div id="about-freifunk">
+<video class="video-js vjs-default-skin vjs-big-play-centered pull-right"
+  controls preload="auto"  width="333" height="188"
+  poster="{{url_for('static/img/video_poster.png')}}"
+  data-setup='{"example_option":true, "preload":"metadata","controls": true, "autoplay": false }'>
+  <source src="http://download.berlin.freifunk.net/media/videos/freifunk_verbindet.webm" type='video/webm' />
+  <source src="http://download.berlin.freifunk.net/media/videos/freifunk_verbindet.mp4" type='video/mp4' />
+  <source src="http://download.berlin.freifunk.net/media/videos/freifunk_verbindet.ogv" type='video/ogg' />
+</video>
+
+  <h3>Co to je Freifunk?</h3>
+       <p>
+       Freifunk je zkratka pro distribuci free sítí a pro jejich vzájemnou komunikaci.
+       Propojením celé čtvrti, chceme překlenout digitální propast a vytvořit nezávislé síťové infrastruktury.
+       Přesněji řečeno, cílem Freifunk je instalace free wifi sítí a jejich propojení.
+       To usnadňuje přenos dat v celém městě v rámci sítě Freifunk. Stručně řečeno, Freifunk je otevřená,
+       ne-komerční, ne-hierarchická iniciativa pro free wifi sítě.
+      </p>
+</div>
+
+<div id="about-functionality">
+        <h3>Jak to funguje?</h3>
+        <p class="pull-left figure">
+          <img src="{{url_for("static/img/adhoc_netz_wikipedia.png")}}" alt="Adhoc-Netz" />
+          <br />
+          Adhoc-Netze
+          <br />
+          <i>Bild: augsburg.freifunk.net, CC-SA</i>
+        </p>
+
+        <p>
+          Základem Freifunk je tzv. mesh síť. Všechny routry v rámci sítě  mohou komunikovat
+           mezi sebou a vytvořit vlastní wifi síť. Směrovací protokol umožňuje pro všechny v rámci sítě
+          komunikovat a vyměňovat data s ostatními účastníky. Některé z uzlů v síti jsou dále
+          spojeny s internetem. Každý rámci Freifunk má také přímý přístup k celosvětové síti.
+        </p>
+   </div>
+
+   <div id="about-participate">
+        <h3>Jak se můžu zapojit?</h3>
+        <p>
+         Připojte se k nám a staňte se členem Freifunk! Přijďte na jedno ze zasedání v c-base, nebo jděte přímo na JakNaTo a získejte router připravený pro Freifunk! Ještě nejsou žádní
+         členové Freifunk ve vašem okolí? Pak jste první a další Vás budou brzy následovat!!
+        </p>
+  </div>
+
+
+  {% endblock %}

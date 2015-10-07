@@ -1,0 +1,79 @@
+      {% meta %}
+        endpoint: contact
+      {% endmeta %}
+      
+      {% block content %}
+      
+      <div id="lang-switch">
+        <a href="{{ url_for('contact_en') }}">English version</a>
+      </div>
+      
+      <h3>Pravidelná setkání</h3>
+      <p>
+      Berlínská Freifunk komunita se schází každou středu v 8 hodin v c-base, Rungestraße 20
+      (poblíž S + U Jannowitzbrücke). Na těchto setkáních se dozvíte vše, co potřebujete
+      vědět o Freifunk - od výstavby antény, po konfiguraci přístupových bodů. Pokud se chcete 
+      zúčastnit, najdete zde zajímavé projekty a 
+      ty správné lidi, aby jste mohl odstartovat svůj vlastní projekt! Existuje mnoho příležitostí
+      pro podporu Freifunk: jako síťový inženýr, programátor, autor, designér nebo promotér..
+      </p>
+      
+      <h3>Emailový seznam</h3>
+      <p>
+        Komunikujeme spolu nejen tváří v tvář na zasedáních, ale také prostřednictvím e-mailu. 
+        Po registraci s vaší e-mailovou adresu, musíte kliknout na odkaz v potvrzovacím mailu. Můžete si vybrat mezi okamžitým doručování zpráv a denním přehledem.
+      </p>
+      
+      <ul>
+        <li>
+          <a href="http://lists.berlin.freifunk.net/cgi-bin/mailman/listinfo/berlin" class="externalLink">Berlin Wireless</a>
+          <i>Berlínský  Freifunk seznam</i>
+        </li>
+      
+        <li>
+          <a href="https://lists.spline.inf.fu-berlin.de/mailman/listinfo/ff-nk" class="externalLink">Berlin Neuk&ouml;lln</a>
+          <i>Seznam v části Berlín Neukölln</i>
+        </li>
+      
+        <li>
+          <a href="http://lists.freifunk.net/mailman/listinfo/wlannews-freifunk.net" class="externalLink">WLANnews</a>
+          <i>
+            Aktuality z komunity a novinky z oblasti wifi a free síťí z celého Německa
+          </i>
+        </li>
+        <li>
+          <a href="http://lists.freifunk.net/mailman/listinfo/wlanware-freifunk.net" class="externalLink">WLANware</a>
+          <i>
+            Technická jednání o hardwaru z celého Německa
+          </i>
+        </li>
+        <li>
+          <a href="http://lists.freifunk.net/mailman/listinfo/wlantalk-freifunk.net" class="externalLink">WLANtalk</a>
+          <i>
+            Seznam adres pro komunikaci mezi jednotlivými komunitami Freifunk
+          </i>
+        </li>
+        <li>
+          <a href="https://twitter.com/freifunk_berlin" class="externalLink">Twitter</a>
+          <i>
+            Sleduj nás
+          </i>
+        </li>
+      </ul>
+      
+      <h3>IRC</h3>
+      <p>Některé členy Freifunk komunity lze nalézt v IRC:
+      <a href="irc://open.ircnet.net/#freifunk" class="externalLink">
+      irc://open.ircnet.net/#freifunk
+      </a>
+      </p>
+      
+      <h3>Web</h3>
+      <p>
+        Máte návrhy, jak bychom mohli zlepšit webové stránky, nebo jste našli nějaké chyby? Prosím nahlašte je
+        <a href="https://github.com/freifunk-berlin/berlin.freifunk.net/issues/new" class="externalLink">zde</a>.
+       Zdrojový kód webových stránek lze nalézt na
+        <a href="https://github.com/freifunk-berlin/berlin.freifunk.net" class="externalLink">github.com/freifunk-berlin/berlin.freifunk.net</a>.
+      </p>
+      
+      {% endblock %}

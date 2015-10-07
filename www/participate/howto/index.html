@@ -1,0 +1,29 @@
+{% meta %}
+endpoint: participate_howto
+parent_tmpl: participate/_layout.html
+{% endmeta %}
+
+{% block content %}
+
+{% filter markdown %}
+
+## Jak se stát Freifunker?
+
+Pro účast v projektu Freifunk, je nutné provést následující kroky:
+
+1. [Registrace Freifunk IP adres a instalace Firmware]({{url_for('participate/howto/flash')}})
+2. [Konfigurace routru]({{url_for('participate/howto/config')}})
+
+Instalace a konfigurace je snadná. Není třeba žádné technické znalosti.
+Pokud budete postupovat podle těchto pokynů.
+
+Máte-li dotazy, můžete kdykoli obrátit na nás nebo přijďte na jedno z našich setkání [Více o setkáních]({{url_for('contact')}}).
+
+Pojďme!
+
+<div class="text-center">
+  <img src="{{url_for('static/img/participate_small.png')}}" />
+</div>
+
+{% endfilter %}
+{% endblock %}

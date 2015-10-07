@@ -1,0 +1,67 @@
+{% meta %}
+endpoint: participate_howto_config
+parent_tmpl: participate/_layout.html
+{% endmeta %}
+{% block content %}
+{% filter markdown %}
+
+## Jak mám nakonfigurovat router?
+
+[zpět]({{url_for('participate/howto')}})
+
+<i>V přechozím kroku jste v průvodci pro přidělování  IP nastavili IP adresu. Nyní můžete nastavit router přes průvodce Berliner Freifunk.</i>
+
+Přejděte na webové stránky routeru **<http://192.168.42.1/>** (oder **<http://frei.funk/>**, nebo zde pokud to není  počáteční konfigurace routeru), a nejprve nastavite nové heslo..
+
+![]({{url_for('static/img/howto/config/passwort.png')}} "Screenshot Passworteingabe")
+
+Kliknutím na tlačítko "Další" stránka" zadáte do formuláře Vaše kontaktní informace. Pokud  správně zadáte údaje, zapojíte se do dalšího bezplatneho
+bezdrátového  připojení. Uvnitř na nás najdete kontakt, pokud chcete připojit svůj router s našim.
+
+![]({{url_for('static/img/howto/config/kontakt.png')}} "Screenshot Kontakteingabe")
+
+Na další stránce se budete muset rozhodnout, jak se chcete podílet na síti Freifunk:
+
+Sdílet Internetu
+Poskytování bezplatné Wi-Fi sítě
+
+Jestli chcete sdílet internet, kliknětě na tlačítko "sdílení Internetu", zašleme Vám seznam adres pro klíče VPN. 
+Který obdržíte v souboru zip na mail. Pokud jste chtěli rozšířit pouze síť Freifunk bez sdílení vašeho internetu, musí Freifunk směrovač ve vaší blízkosti, s nímž váš router lze spojit. 
+Na naší mapě uvidíte mnoho z routeru Berlín Freifunk. Můžete také kontaktovat další členy a domluvit se na opitimálním natavení routeru.
+
+![]({{url_for('static/img/howto/config/entscheidung.png')}} "Screenshot Entscheidung Internet teilen oder Freifunknetz bereitstellen")
+
+(Pokud chcete, aby váš Internet nebyl sdílen, klikněte sem a přejděte k dalšímu bodu)
+
+Rozbalte zip soubor, který jste obdrželi. Ten zahrnuje mimo jiné i dva důležité soubory pro váš přístup VPN:
+
+* dein-vpn-tunnelname.crt
+* dein-vpn-tunnelname.key
+
+Vložte tyto  dva soubory na další stránku. Zde také můžete zadat, jaké pásma chcete poskytovat k  bezplatnému bezdrátovému připojení k síti.
+
+![]({{url_for('static/img/howto/config/internet.png')}} "Screenshot Internet teilen")
+
+Kliknutím na tlačítko "Další" se dostanete na volitelná nastavení:
+
+![]({{url_for('static/img/howto/config/optionaleEinstellungen.png')}} "Screenshot optionale Einstellungen")
+
+Zde si můžete přepnout na centrální monitorování. Kromě toho si můžete nakonfigurovat vlastní přístupový bod. Data prostřednictvím tohoto přístupového
+ bodu nemůžou být doručena prostřednictvím sítě Freifunk ale přímo prostřednictvím připojení k Internetu.
+
+Na další stránce je nastavení IP adresy vašeho routeru, zde jsou informace o jednotlivých routrech [Wizard zur IP-Vergabe](http://config.berlin.freifunk.net/wizard/routers).
+
+![]({{url_for('static/img/howto/config/ipeinstellungen.png')}} "Screenshot IP-Adressen konfigurieren")
+
+V závislosti na na tom, jakou frekvenci pošle router, můžete nakonfigurovat jednu či dvě IP adresy pro Mesh [Meshen](http://wiki.freifunk.net/Meshing). Touto adresou lze váš router připojit 
+k jiným směrovačům Freifunk a tak rozšiřit síť.
+
+SSID je název bezdrátové sítě s volným přístupem pro návštěvníky a vaši sousedé se mohou připojit z mobilního telefonu nebo počítače. 
+Pomocí adresového prostoru, kterým jsou IP adresy konfigurovány, uživatelé obdrží přístupový bod.
+
+Pokud jste nyní  naposledy najeli na "Další stranka", jste se dostali do cíle! Jakmile bude váš router restartován, můžete se připojit zdarma!
+
+Můj směrovač je po počátečním nastavení prostřednictvím (W) LAN připojen přímo k **<http://frei.funk/>**.
+
+{% endfilter %}
+{% endblock %}    

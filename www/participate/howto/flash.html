@@ -1,0 +1,75 @@
+{% meta %}
+  endpoint: participate_howto_flash
+  parent_tmpl: participate/_layout.html
+{% endmeta %}
+
+{% block content %}
+<div id="howto">
+{% filter markdown %}
+
+## Jak zapojit router?
+
+[zpět]({{url_for('participate/howto')}})
+
+### 1. Stáhněte si firmware a zaregistrujte Freifunk IP
+  Můžete si stáhnout potřebné obrazy firmwaru v sekci Downloads.
+### 2. Připojte Freifunk router k počítači
+
+
+<p class="pull-left">
+  <img src="{{url_for('static/img/howto/wdr3500-anschluss.jpg')}}" alt="Steck deinen Router für die Einrichtung hier ein Router") style="width: 200px; float: left; margin: 0 10px" />
+   Vypněte router, pote připojete router šedým kablem LAN k počítači.
+</p>
+
+
+### 3. Nahrát firmware
+Nyní můžete snadno nastavit router pomocí prohlížeče.
+
+Do svého prohlížeče zadejte následující adresu: http://192.168.0.1/
+
+Než půjdete dál, budete se muset nejprve přihlásit. Inspirovaný Kombinace malý uživatelské jméno / heslo je admin / admin
+
+Váše okno prohlížeče by mělo nyní vypadat takto - výsledek zde "Systémové nástroje" odkaz.
+
+![]({{url_for('static/img/howto/TP_link_start.png')}} "Geh zu System Tools")
+
+Dále si můžete vybrat z nabídky "Upgrade Firmware" (1). Pak můžete vybrat nahrát (2) (v kroku 2) soubor dříve načten. Po kliknutí na "Upgrade" (3) proces začíná.
+
+Poznámka pro TL-WR841N verze 8.4: Když bliká přes upgrade firmwaru originální firmware, pokud dojde nutné k následující chybě:
+    Error code: 23002
+    The uploaded file name is too long!
+
+Zde pomáhá přejmenování stažený Freifunk firmware před nahráním.
+![]({{url_for('static/img/howto/TP_link_firmware.png')}} "Wähle die Freifunk Firmware und spiele sie ein")
+
+Musíte potvrdit krátce znovu ...
+
+![]({{url_for('static/img/howto/TP_link_firmware_file.png')}} "Einmal Bestätigen")
+
+... A instalace běží. Zatímco instalace běží, prosím táhnout v žádném případě zástrčky nebo síťové kabely - protože pak váš router by nad.
+
+![]({{url_for('static/img/howto/TP_link_upgrade_progress.png')}} "Die Installation läuft")
+
+## 5. Dokončení
+
+Poté co je firmware nahraný, směrovač se restartuje.
+
+To, že se router restartuje, si všimnete blikáním světel na routeru. Za prvé, všechna světla blikají divoce, pak jdou ven. Poté, když lampa pomocí zařízení pohodlně na sebe bliká, je router v režimu config je tady.
+
+Nyní je router dostupný na adrese a zobrazí se chybová zpráva. To je dobře, protože teď už neprovozuje starý firmware, ale nový Freifunk firmware na routeru. Na směrovač se dostaneme zadáním následující adresy do prohlížeče:
+**<http://192.168.42.1/>**
+
+![]({{url_for('static/img/howto/TP_link_firmware_reboot_finished.png')}} "Die alte Firmware ist weg - die neue läuft")
+
+Dále musíte nastavit a přihlaste se do směrovače sítě Freifunk.**[Konfigurace routeru]({{url_for('participate/howto/config')}})**.
+
+**<berlin@berlin.freifunk.net>**
+
+[![]({{url_for('static/img/howto/nolaw.png')}})](http://creativecommons.org/publicdomain/zero/1.0/)
+
+Die Anleitung basiert auf
+<https://github.com/rainersax/FreifunkHamburgHandbuch>.
+
+{% endfilter %}
+</div>
+{% endblock %}

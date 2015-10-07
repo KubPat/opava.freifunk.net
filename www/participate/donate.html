@@ -1,0 +1,45 @@
+{% meta %}
+  endpoint: participate_donate
+  parent_tmpl: participate/_layout.html
+{% endmeta %}
+
+{% block content %}
+
+<h3>Podpora Freifunk v Berlíně!</h3>
+
+<p>
+  Chcete-li si vytvořit a udržet  free wifi připojení k síti, bude záviset na vašich pravidelných příspěvcích. Můžete nám poslat peníze několika způsoby:
+</p>
+
+<h4>Betterplace:</h4>
+
+<iframe style="border: 0; padding: 0; margin: 0;"
+  src="http://www.betterplace.org/de/projects/14418-berlin-freifunk-net/widget"
+  height="260" width="160" frameborder="0" marginwidth="0"
+  marginheight="0">
+</iframe>
+
+<iframe style="border: 0; padding: 0; margin: 0;"
+  src="https://www.betterplace.org/de/projects/12172-infrastruktur-fur-freifunk-net/widget"
+  height="260" width="160" frameborder="0" marginwidth="0"
+  marginheight="0">
+</iframe>
+
+<h4>Pomocí Flattr:</h4>
+<a href="https://flattr.com/submit/auto?user_id=freifunk&url=http://freifunk.net&title=Freifunk%20Berlin&description=Freifunk%20is%20a%20non-commercial%20initiative%20for%20free%20decentraliced%20wireless%20mesh%20networks.&language=de_DE&tags=distributed,wifi,mesh,openwrt,olsr&category=software">
+  <img src="{{url_for('static/img/flattr-badge-large.png')}}" alt="Flattr Freifunk Berlin" />
+</a>
+
+<h4>Bankovním převodem:</h4>
+
+<p>
+Förderverein Freie Netzwerke e.V.<br>
+Konto 722 722 7006<br>
+BLZ 100 900 00<br>
+IBAN DE51100900007227227006<br>
+BIC BEVODEBB<br>
+Berliner Volksbank
+</p>
+
+
+{% endblock %}

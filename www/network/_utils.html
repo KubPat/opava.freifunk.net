@@ -1,0 +1,9 @@
+{% macro render_subnav() -%}
+      <ul class="span12 submenu">
+        {% import '_utils.html' as utils with context%}
+        {{ utils.nav('Mapa', 'network/map') }}
+        {{ utils.nav('Připojení', 'network/nodes') }}
+        {{ utils.nav('Statistika', 'network/stats') }}
+        {{ utils.nav_external('Monitorování', 'http://monitor.berlin.freifunk.net') }}
+      </ul>
+{%- endmacro %}
